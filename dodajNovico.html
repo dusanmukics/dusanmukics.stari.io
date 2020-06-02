@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/main.css">
-    <title>Prijava</title>
+    <title>Dodaj novico</title>
 </head>
 
 <body style="background-image: url('/img/pattern.jpg')">
@@ -19,42 +19,40 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav item">
-                    <a class="nav-link" href="/novice.html">Novice</a>
-                </li>
-                <li class="nav item">
                     <a class="nav-link" href="/galerija.html">Galerija</a>
                 </li>
                 <li class="nav item">
                     <a class="nav-link" href="/programi.html">Programi</a>
-                </li>
                 <li class="nav item">
                     <a class="nav-link" href="/login.html">Prijava</a>
                 </li>
+                </li>
             </ul>
         </div>
-    </nav>
+    </nav>>
     <div class="caption">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4 okvir">
-                <h2>Prijavi se za vnašanje novic</h2>
+                <h2>Vnesi novico</h2>
                 <form id="prijava">
                     <div class="form-group">
-                        <label for="ime" type="email">Elektronski naslov</label>
-                        <input type="email" class="form-control" name="ime">
+                        <textarea name="novica" class="novica" rows=8></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="geslo" type="password">Geslo</label>
-                        <input type="password" class="form-control" name="geslo">
-                    </div>
+                    <h4>Datum: <span id="datum"></span></h3>
+                    <script>
+                        let n = new Date();
+                        let y = n.getFullYear();
+                        let m = n.getMonth() + 1;
+                        let d = n.getDate();
+                        document.getElementById("datum").innerHTML = d.toString() + ". " + m.toString() + ". " + y.toString()
+                    </script>
                     <button type="submit" class="btn btn-primary" onclick="preveriGeslo()">Pošlji</button>
+                </form>
             </div>
-            </form>
+
+            <div class="col-4"></div>
         </div>
-        <div class="col-4"></div>
-    </div>
-    </div>
-    <script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -19,3 +19,20 @@
     font-size: medium;
     color: brown;
 }
+
+body {
+    padding-top: 65px;
+}
+
+.okvir {
+    border-style: groove;
+    padding: 15px;
+}
+
+textarea.novica {
+    width: 100%;
+  }
+
+span {
+    font-weight: bold;
+}
